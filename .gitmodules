@@ -1,3 +1,12 @@
 [submodule "vim"]
 	path = vim
 	url = git@github.com:mbirko/vim.git
+[submodule "tmux/plugins/tmux-continuum"]
+	path = tmux/plugins/tmux-continuum
+	url = git@github.com:tmux-plugins/tmux-continuum.git
+[submodule "tmux/plugins/tmux-resurrect"]
+	path = tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "tmux/plugins/tmux-fzf"]
+	path = tmux/plugins/tmux-fzf
+	url = git@github.com:sainnhe/tmux-fzf.git
