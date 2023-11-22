@@ -2,7 +2,7 @@
 # Source: https://unix.stackexchange.com/a/113768
 # Check if tmux is aviailable, if shell is interactive, if terminal is not screen or tmux, and if tmux is not already running
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+  exec tmux a || tmux 
 fi
 
 function cduni {
