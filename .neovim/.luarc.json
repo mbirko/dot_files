@@ -1,0 +1,6 @@
+{
+    "diagnostics.globals": [
+        "configure_lsp_ui",
+        "opts"
+    ]
+}
