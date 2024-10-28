@@ -28,8 +28,10 @@ lazy.setup({
 
   require('custom.plugins.telescope'),
   require('custom.plugins.lsp'),
+  require('custom.plugins.fsharp'),
   require('custom.plugins.cmp'),
   require('custom.plugins.snippets'),
+  require('custom.plugins.indent-blankline')
 }, {
   defaults = { lazy = true, },
   performance = {

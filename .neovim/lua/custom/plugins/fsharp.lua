@@ -1,0 +1,3 @@
+return {
+  'PhilT/vim-fsharp'
+}

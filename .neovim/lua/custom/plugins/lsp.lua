@@ -50,7 +50,7 @@ return {
         filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
       })
       -- configure_lsp_server('hls') -- NOTE: haskell-language-server
-      -- configure_lsp_server('pyright') -- NOTE: python-language-server
+      configure_lsp_server('pyright') -- NOTE: python-language-server
       -- configure_lsp_server('rust_analyzer') -- NOTE: rust-analyzer
       -- configure_lsp_server('texlab')
     end,
