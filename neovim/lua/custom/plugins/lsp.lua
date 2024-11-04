@@ -49,10 +49,27 @@ return {
         -- NOTE: all supported filetypes (see :help lspconfig-all) without protobuf
         filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
       })
-      -- configure_lsp_server('hls') -- NOTE: haskell-language-server
+      configure_lsp_server('hls') -- NOTE: haskell-language-server
       configure_lsp_server('pyright') -- NOTE: python-language-server
       -- configure_lsp_server('rust_analyzer') -- NOTE: rust-analyzer
       -- configure_lsp_server('texlab')
+      configure_lsp_server('nixd', {
+        settings = {
+          nixd = {
+            nixpkgs = {
+              expr = "import <nixpkgs> { }",
+            },
+            formatting = { 
+              command = { "nixfmt" },
+            },
+            options = {
+              nixos = {
+                expr = '(builtins.getFlakes "/etc/nixos/flake.nix").nixosConfigurations.T14.options',
+              },
+            },
+          },
+        },
+      })
     end,
   },
 
