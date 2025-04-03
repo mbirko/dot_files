@@ -39,6 +39,7 @@ return {
     event = 'VeryLazy',
 
     config = function()
+      configure_lsp_server('yamlls')
       configure_lsp_server('fsautocomplete')         -- NOTE: Fsharp auto complete
       configure_lsp_server('fsharp_language_server') -- NOTE: Fsharp language server
       -- configure_lsp_server('dprint',
