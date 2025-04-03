@@ -25,7 +25,7 @@ lazy.setup({
   require('custom.plugins.treesitter'),
   require('custom.plugins.hardtime'),
   require('custom.plugins.lualine'),
-
+  require('custom.plugins.ale'),
   require('custom.plugins.telescope'),
   require('custom.plugins.lsp'),
   require('custom.plugins.fsharp'),
