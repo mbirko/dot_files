@@ -15,6 +15,7 @@ return {
     { 'nvim-lua/plenary.nvim' },
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     { 'nvim-telescope/telescope-ui-select.nvim' },
+    { 'tpope/vim-fugitive' },
   },
 
   cmd = 'Telescope',
@@ -30,6 +31,7 @@ return {
     { '<leader>fh', function() require('telescope.builtin').help_tags({ previewer = false }) end,    mode = { 'n', 'v' } },
     { '<leader>fd', function() require('telescope.builtin').diagnostics({ previewer = false }) end,  mode = { 'n', 'v' } },
     { '<leader>fr', function() require('telescope.builtin').live_grep({ previewer = false }) end,    mode = { 'n', 'v' } },
+    { '<leader>fp', function() require('telescope.builtin').commands({ previewer = false }) end,     mode = { 'n', 'v' } },
 
     { '<leader>fg', function() require('telescope.builtin').git_branches({ previewer = false }) end, mode = { 'n', 'v' } },
     { '<leader>fc', function() require('telescope.builtin').git_commits({ previewer = false }) end,  mode = { 'n', 'v' } },
