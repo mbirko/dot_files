@@ -26,6 +26,10 @@ return {
     return {
       preselect = 'none',
 
+      window = {
+        documentation = cmp.config.window.bordered({ border = "rounded" }),
+      },
+
       snippet = {
         expand = function(args)
           require('luasnip').lsp_expand(args.body)
