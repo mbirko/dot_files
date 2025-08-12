@@ -52,6 +52,7 @@ return {
         filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
       })
       configure_lsp_server('gopls')
+      configure_lsp_server('harper_ls')
 
       -- configure_lsp_server('hls') -- NOTE: haskell-language-server
 
