@@ -42,7 +42,7 @@ return {
       configure_lsp_server('yamlls')
       configure_lsp_server('fsautocomplete')         -- NOTE: Fsharp auto complete
       configure_lsp_server('fsharp_language_server') -- NOTE: Fsharp language server
-      configure_lsp_server('marksman')               -- NOTE: Markdown lsp
+--      configure_lsp_server('marksman')               -- NOTE: Markdown lsp
       -- configure_lsp_server('dprint',
       configure_lsp_server('lua_ls')                 -- NOTE: Lua language server
       configure_lsp_server('ts_ls')                  -- NOTE: TypeScript language server
@@ -52,7 +52,6 @@ return {
         filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
       })
       configure_lsp_server('gopls')
-      configure_lsp_server('harper_ls')
 
       -- configure_lsp_server('hls') -- NOTE: haskell-language-server
 
