@@ -18,8 +18,8 @@ vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
 -- save
 vim.keymap.set('n', '<leader>w', '<cmd>silent write<cr>', opts)
 
--- Netrw / explorer
-vim.keymap.set('n', '-', '<cmd>Lexplore<cr><cmd>vertical resize 30<cr>', opts)
+-- explorer
+vim.keymap.set('n', '-', '<cmd>Oil<cr>', opts)
 
 local function hover_highlight(client, bufnr)
   if not client.server_capabilities.documentHighlightProvider then
