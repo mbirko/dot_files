@@ -1,5 +1,5 @@
 local function configure_lsp_server(server, extra)
-  local lspconfig = require('lspconfig')[server]
+  local lspconfig = vim.lsp.config[server]
 
   local config = {
     capabilities = vim.lsp.protocol.make_client_capabilities(),
@@ -24,7 +24,7 @@ local function configure_lsp_server(server, extra)
     config = vim.tbl_deep_extend('force', config, extra)
   end
 
-  lspconfig.setup(config)
+  vim.lsp.enable(server)
   return true
 end
 
@@ -89,8 +89,15 @@ return {
           }
         }
       }) -- NOTE: python-language-server
+
       -- configure_lsp_server('rust_analyzer') -- NOTE: rust-analyzer
       -- configure_lsp_server('texlab')
+
+      configure_lsp_server('ocamllsp', {
+        settings = {
+          formatting = {'ocamlformat'}
+        }
+      })
       configure_lsp_server('nixd', {
         settings = {
           nixd = {
