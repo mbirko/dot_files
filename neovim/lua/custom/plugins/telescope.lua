@@ -36,7 +36,15 @@ return {
     { '<leader>fg', function() require('telescope.builtin').git_branches({ previewer = false }) end, mode = { 'n', 'v' } },
     { '<leader>fc', function() require('telescope.builtin').git_commits({ previewer = false }) end,  mode = { 'n', 'v' } },
     { '<leader>fC', function() require('telescope.builtin').git_bcommits({ previewer = false }) end, mode = { 'n', 'v' } },
-
+    { '<leader>ff', 
+      function() 
+        require('telescope.builtin').find_files({ 
+          find_command = { 'fd', '--strip-cwd-prefix'}, 
+          previewer = false
+        }) 
+      end, 
+      mode = { 'n', 'v'} 
+    },
     {
       '<leader>fs',
       function()
@@ -59,7 +67,7 @@ return {
     },
     pickers = {
       find_files = {
-        find_command = { 'fd', '--type', 'f', '--strip-cwd-prefix' }
+        find_command = { 'fd', '--type', 'f', '--strip-cwd-prefix'}
       },
     },
     extensions = {
