@@ -30,7 +30,7 @@ return {
     { '<leader>fb', function() require('telescope.builtin').buffers({ previewer = false }) end,      mode = { 'n', 'v' } },
     { '<leader>fh', function() require('telescope.builtin').help_tags({ previewer = false }) end,    mode = { 'n', 'v' } },
     { '<leader>fd', function() require('telescope.builtin').diagnostics({ previewer = false }) end,  mode = { 'n', 'v' } },
-    { '<leader>fr', function() require('telescope.builtin').live_grep({ previewer = false }) end,    mode = { 'n', 'v' } },
+    { '<leader>fr', function() require('telescope.builtin').live_grep({ previewer = true }) end,    mode = { 'n', 'v' } },
     { '<leader>fp', function() require('telescope.builtin').commands({ previewer = false }) end,     mode = { 'n', 'v' } },
 
     { '<leader>fg', function() require('telescope.builtin').git_branches({ previewer = false }) end, mode = { 'n', 'v' } },
@@ -39,8 +39,8 @@ return {
     { '<leader>ff', 
       function() 
         require('telescope.builtin').find_files({ 
-          find_command = { 'fd', '--strip-cwd-prefix'}, 
-          previewer = false
+          previewer = false,
+          find_command = { 'fd', '--type', 'f',  '--strip-cwd-prefix','--hidden', '--exclude', '.git'}
         }) 
       end, 
       mode = { 'n', 'v'} 
@@ -52,7 +52,6 @@ return {
           if value == '' then
             return
           end
-
           require('telescope.builtin').grep_string({ search = value })
         end)
       end,
