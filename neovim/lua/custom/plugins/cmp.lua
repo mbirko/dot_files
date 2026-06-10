@@ -49,6 +49,15 @@ return {
         ['<C-y>'] = { i = cmp.mapping.confirm({ select = true }) },
 
         -- item selection
+        ['<C-n>'] = cmp.mapping(function()
+          if cmp.visible() then
+            cmp.select_next_item()
+          elseif luasnip.expand_or_locally_jumpable() then
+            luasnip.expand_or_jump()
+          else
+            cmp.complete()
+          end
+        end, { 'n', 'i', 's' }),
         ['<C-p>'] = cmp.mapping(function()
           if cmp.visible() then
             cmp.select_prev_item()
@@ -59,15 +68,6 @@ return {
           end
         end, { 'n', 'i', 's' }),
 
-        ['<C-n>'] = cmp.mapping(function()
-          if cmp.visible() then
-            cmp.select_next_item()
-          elseif luasnip.expand_or_locally_jumpable() then
-            luasnip.expand_or_jump()
-          else
-            cmp.complete()
-          end
-        end, { 'n', 'i', 's' }),
       },
 
       formatting = {
