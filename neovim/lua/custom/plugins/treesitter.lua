@@ -13,6 +13,9 @@ return {
       sync_install = false,
       auto_install = false,
 
+      fold = { 
+        enable = true,
+      },
       highlight = {
         enable = true,
         disable = function(lang, buf)
