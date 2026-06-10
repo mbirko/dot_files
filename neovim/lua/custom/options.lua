@@ -58,4 +58,5 @@ vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
-
+-- Buildt in plugins
+vim.cmd('packadd nvim.undotree')

@@ -6,6 +6,9 @@ vim.g.maplocalleader = ' '
 -- clear highlight
 vim.keymap.set('n', '<ESC>', '<CMD>noh<cr>', opts)
 
+-- undotree
+vim.keymap.set('n', '<leader>u', require('undotree').open)
+--
 -- lsp
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
