@@ -13,7 +13,10 @@
 
     in
     {
-      devShells.${system}.deafault = pkgs.mkShell {
+      devShells.${system}.default = pkgs.mkShell {
+        shellHook = ''
+          fish
+        '';
         nativeBuildInputs = [
           pkgs.lua-language-server
         ];
