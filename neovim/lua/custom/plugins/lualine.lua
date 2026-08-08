@@ -17,7 +17,7 @@ return {
       },
       lualine_b = { 'filename', 'branch', 'diff' },
       lualine_c = {},
-      lualine_x = {},
+      lualine_x = { function() return vim.fn.ObsessionStatus('Ob', 'X') end},
       lualine_y = { 'filetype', 'progress' },
       lualine_z = {
         { 'location', separator = { right = '' }, left_padding = 2 },

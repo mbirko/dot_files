@@ -35,6 +35,7 @@ lazy.setup({
   require('custom.plugins.cmp'),
   require('custom.plugins.snippets'),
   require('custom.plugins.indent-blankline'),
+  require('custom.plugins.vim-obsession')
   --  require('custom.plugins.vimwiki'),
 }, {
   defaults = { lazy = true, },
