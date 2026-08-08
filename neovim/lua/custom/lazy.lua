@@ -21,6 +21,7 @@ end
 
 lazy.setup({
   require('custom.plugins.theme'),
+  require('custom.plugins.esp32'),
   require('custom.plugins.tmux'),
   require('custom.plugins.oil'),
   require('custom.plugins.treesitter'),

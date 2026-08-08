@@ -50,6 +50,7 @@ return {
       configure_lsp_server('clangd', {
         -- NOTE: all supported filetypes (see :help lspconfig-all) without protobuf
         filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
+        require('esp32').lsp_config(),
       })
       configure_lsp_server('gopls')
 
