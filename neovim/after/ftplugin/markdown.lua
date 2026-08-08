@@ -21,8 +21,8 @@ vim.opt_local.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt_local.foldtext = require("custom.modules.foldtext")
 
 
-vim.keymap.set("n", "j", "gj", { buffer = true })
-vim.keymap.set("n", "k", "gk", { buffer = true })
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", {expr = true, silent = ture, buffer = true })
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", {expr = true, silent = ture, buffer = true })
 
 -- pandoc , markdown
 vim.keymap.set("n", "<leader>pc", "<cmd>RunSilent pandoc --pdf-engine=typst -o /tmp/vim-pandoc-out.pdf %<cr>",
